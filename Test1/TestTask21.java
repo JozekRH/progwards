@@ -8,6 +8,6 @@ public class TestTask21 {
 	}
 
 	public int t2() {
-		return 222;
+		return 2221;
 	}
 }
