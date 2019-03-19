@@ -7,7 +7,7 @@ public class TestTask21 {
 		return "111";
 	}
 
-	public int t2() {
-		return 222;
+	public String t2() {
+		return "222";
 	}
 }
