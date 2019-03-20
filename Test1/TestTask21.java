@@ -1,8 +1,8 @@
-package Test1;
+package Test2;
 
 public class TestTask21{
 	
-	public String t11() {
+	public String t1() {
 		//int[] a = null; a[0] = 0;
 		return "111";
 	}
