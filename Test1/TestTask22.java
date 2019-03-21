@@ -2,7 +2,7 @@ package Test1;
 
 public class TestTask22{
 	
-	public String t1() {
+	public String t11() {
 		//int[] a = null; a[0] = 0;
 		return "111";
 	}
