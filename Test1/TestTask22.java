@@ -4,7 +4,7 @@ public class TestTask22{
 	
 	public String t11() {
 		//int[] a = null; a[0] = 0;
-		//lalalalalala
+		//lalalalalalalala
 		return "111";
 	}
 
