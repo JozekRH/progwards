@@ -4,7 +4,7 @@ public class TestTask21{
 	
 	public String t1() {
 		//int[] a = null; a[0] = 0;
-		//lalalalalalalalala
+		//Типа изменено
 		return "111";
 	}
 
