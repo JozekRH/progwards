@@ -4,8 +4,6 @@ public class Animal {
 
 	public enum AnimalKind {ANIMAL, COW, HAMSTER, DUCK};
 	public enum FoodKind {UNKNOWN, HAY, CORN};
-	private AnimalKind animalKind = AnimalKind.ANIMAL;
-	private FoodKind foodKind = FoodKind.UNKNOWN;
 	private double weight = 1D;
 
 	public Animal()
@@ -20,17 +18,17 @@ public class Animal {
 
 	public AnimalKind getKind()
 	{
-		return this.animalKind;
+		return AnimalKind.ANIMAL;
 	}
 	
 	public FoodKind getFoodKind()
 	{
-		return this.foodKind;
+		return FoodKind.UNKNOWN;
 	}
 	
 	public String toString()
 	{
-		return "I am " + this.animalKind.toString() + ", eat " + this.foodKind.toString() + " " + calculateFoodWeight(); 
+		return "I am " + getKind() + ", eat " + getFoodKind() + " " + calculateFoodWeight(); 
 	}
 
 	public double getWeight()
