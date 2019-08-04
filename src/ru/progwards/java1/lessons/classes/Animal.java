@@ -4,13 +4,8 @@ public class Animal {
 
 	public enum AnimalKind {ANIMAL, COW, HAMSTER, DUCK};
 	public enum FoodKind {UNKNOWN, HAY, CORN};
-	private double weight = 1D;
+	private double weight;
 
-	public Animal()
-	{
-		
-	}
-	
 	public Animal(double weight)
 	{
 		this.weight = weight;
