@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.interfaces;
 
 public class ArraySort {
 
-	public static Comparable<Number>[] sort(Comparable<Number>[] a)
+	public static void sort(Comparable<Number>[] a)
 	{
 		for (int i = 0; i < a.length; i++)
 		{
@@ -16,7 +16,5 @@ public class ArraySort {
 				}
 			}
 		}
-		
-		return a;
 	}
 }

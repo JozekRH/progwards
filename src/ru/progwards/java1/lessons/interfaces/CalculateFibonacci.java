@@ -23,7 +23,7 @@ public class CalculateFibonacci {
         return fibo;
     }
 	
-	public static class CacheInfo
+	static class CacheInfo
 	{
 		public static int n;
 		public static int fibo;
