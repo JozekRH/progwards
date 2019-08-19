@@ -5,12 +5,14 @@ public class BArray<T extends Object> {
     int size;
     int blockSize;
 
-    public BArray(int inilialSize, int blockSize) {
+    @SuppressWarnings("unchecked")
+	public BArray(int inilialSize, int blockSize) {
         this.blockSize = blockSize;
         array = (T[]) new Object[inilialSize];
     }
 
-    public void add(T item) {
+    @SuppressWarnings("unchecked")
+	public void add(T item) {
         if (array.length == size) {
             int newSize = array == null ? 1 : array.length + blockSize;
             Object[] newArray = new Object[newSize];
