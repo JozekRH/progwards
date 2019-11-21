@@ -2,17 +2,27 @@ package ru.progwards.java1.lessons.register2;
 
 public class Bit {
 
-	private boolean value = false;
-	
-	public Bit() {
-	}
+    private boolean bit;
 
-	public Bit(boolean value) {
-		this.value = value;
-	}
-	
-	@Override
-	public String toString(){
-		return this.value ? "1" : "0";
-	}
+    public Bit() {
+        bit = false;
+    }
+
+    public Bit(boolean value) {
+        bit = value;
+    }
+
+    public void set(boolean value) {
+        bit = value;
+    }
+
+    public boolean get() {
+        return bit;
+    }
+
+    public String toString() {
+        return bit ? "1" : "0";
+    }
+
+    //lalala
 }
