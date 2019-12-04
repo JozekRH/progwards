@@ -15,6 +15,6 @@ public class Task1 {
 
         System.out.print(b);
         System.out.print(с);
-        System.out.println(a + 1);
+        System.out.println(a);
     }
 }
