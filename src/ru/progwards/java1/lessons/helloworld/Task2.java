@@ -10,7 +10,7 @@ public class Task2 {
 
         int z = x - y;
         System.out.print("Результат z = ");
-        System.out.println(z);
+        System.out.println(z + 1);
     }
 
     public static void main(String[] args) {
