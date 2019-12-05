@@ -28,7 +28,7 @@ public class DIntArray {
 			else if (i == pos) newarr[i] = num;
 			else if (i > pos) newarr[i] = arr[i - 1];
 		}
-		arr = newarr;
+		//arr = newarr;
 	}
 	
 	public void atDelete(int pos)
