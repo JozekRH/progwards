@@ -39,7 +39,7 @@ public class DIntArray {
 			if (i < pos) newarr[i] = arr[i];
 			else if (i > pos) newarr[i - 1] = arr[i];
 		}
-		arr = newarr;
+		//arr = newarr;
 	}
 	
 	public int at(int pos)
