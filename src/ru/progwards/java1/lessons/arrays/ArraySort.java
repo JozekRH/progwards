@@ -12,7 +12,7 @@ public class ArraySort {
 				{
 					int n = a[j];
 					a[j] = a[i];
-					a[i] = n;
+					//a[i] = n;
 				}
 			}
 		}
