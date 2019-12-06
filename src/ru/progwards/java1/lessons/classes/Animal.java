@@ -21,7 +21,12 @@ public class Animal {
 		return FoodKind.UNKNOWN;
 	}
 	
-	public String toString()
+    public String toString()
+    {
+        return "I am " + getKind() + ", eat " + getFoodKind(); 
+    }
+
+    public String toStringFull()
 	{
 		return "I am " + getKind() + ", eat " + getFoodKind() + " " + calculateFoodWeight(); 
 	}
