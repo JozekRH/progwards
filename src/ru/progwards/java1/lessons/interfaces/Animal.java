@@ -1,6 +1,6 @@
 package ru.progwards.java1.lessons.interfaces;
 
-public class Animal implements FoodCompare{
+public class Animal implements FoodCompare, CompareWeight, Comparable<Animal>{
 
 	public enum AnimalKind {ANIMAL, COW, HAMSTER, DUCK};
 	public enum FoodKind {UNKNOWN, HAY, CORN};
@@ -43,18 +43,16 @@ public class Animal implements FoodCompare{
 	
 	public boolean equals(Object o)
 	{
-		try
+	    if (!o.getClass().equals(Animal.class) && !o.getClass().getSuperclass().equals(Animal.class)) return false;
+	    
+	    Animal a = (Animal)o;
+		if (this.getWeight() == a.getWeight())
 		{
-			Animal a = (Animal)o;
-			if (this.getWeight() == a.getWeight())
+			if (this.getKind() == a.getKind())
 			{
-				if (this.getKind() == a.getKind())
-				{
-					return true;
-				}
+				return true;
 			}
 		}
-		catch (Exception e){}
 		
 		return false;
 	}
@@ -79,7 +77,21 @@ public class Animal implements FoodCompare{
 	}
 
 	@Override
-	public int сompareFoodPrice(Animal animal) {
+	public int compareFoodPrice(Animal animal) {
 		return Double.compare(this.getFoodPrice(), animal.getFoodPrice());
 	}
+
+    @Override
+    public int compareTo(Animal o) {
+        if (this.getWeight() < o.getWeight()) return -1;
+        else if (this.getWeight() > o.getWeight()) return 1;
+        else return 0;
+    }
+
+    @Override
+    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+        if (this.getWeight() < ((Animal)smthHasWeigt).getWeight()) return CompareWeight.CompareResult.LESS;
+        else if (this.getWeight() > ((Animal)smthHasWeigt).getWeight()) return CompareWeight.CompareResult.GREATER;
+        else return CompareWeight.CompareResult.EQUAL;
+    }
 }

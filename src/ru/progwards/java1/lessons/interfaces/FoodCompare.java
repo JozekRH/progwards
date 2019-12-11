@@ -1,6 +1,6 @@
 package ru.progwards.java1.lessons.interfaces;
 
 public interface FoodCompare {
-	
-	public int сompareFoodPrice(Animal animal);
+    
+    public int compareFoodPrice(Animal animal);
 }
