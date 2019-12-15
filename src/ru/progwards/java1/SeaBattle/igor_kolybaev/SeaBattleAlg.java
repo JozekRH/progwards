@@ -1,4 +1,4 @@
-package ru.progwards.java1.SeaBattle.student1;
+package ru.progwards.java1.SeaBattle.igor_kolybaev;
 
 import ru.progwards.java1.SeaBattle.SeaBattle;
 import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
