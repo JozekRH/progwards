@@ -46,7 +46,7 @@ public class CyclesGoldenFibo {
         } else if (a == c) {
             // основание b
             if (isGoldenRatio(a, b))
-                return true;
+                return false;
         }
 
         return false;
