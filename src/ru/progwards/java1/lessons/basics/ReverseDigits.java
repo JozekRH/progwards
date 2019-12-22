@@ -11,7 +11,7 @@ public class ReverseDigits {
 
         int highDigit = number % 10;
 
-        return -1;//lowDigit * 100 + middleDigit * 10 + highDigit;
+        return lowDigit * 100 + middleDigit * 10 + highDigit;
     }
 
     public static void main(String[] args) {
