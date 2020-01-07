@@ -15,12 +15,26 @@ public class CollectionsSort {
         Collections.sort((ArrayList<Integer>) data);
     }
     
+    public static void minSort(Collection<Integer> data){
+        
+        Collection<Integer> nc = new ArrayList<>(); 
+        
+        while (!data.isEmpty()){
+            Integer i = Collections.min(data);
+            nc.add(i);
+            data.remove(i);
+        }
+
+        data.addAll(nc);
+    }
+
     static void collSort(Collection<Integer> data){
         Collections.sort((ArrayList<Integer>)data);
     }
     
+    
     public static Collection<String> compareSort(){
 
-        return Arrays.asList(new String[]{"collSort", "mySort"});
+        return Arrays.asList(new String[]{"collSort", "mySort", "minSort"});
     }
 }

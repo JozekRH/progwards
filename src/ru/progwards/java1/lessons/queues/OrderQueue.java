@@ -12,9 +12,9 @@ public class OrderQueue {
     public void add(Order order){
         if (order == null) return;
         
-        if (order.getSum() < 20000)
+        if (order.getSum() > 20000)
             q1.add(order);
-        else if (order.getSum() < 10000)
+        else if (order.getSum() > 10000)
             q2.add(order);
         else 
             q3.add(order);
