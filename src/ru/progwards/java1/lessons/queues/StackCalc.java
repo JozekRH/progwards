@@ -23,7 +23,8 @@ public class StackCalc {
     }
     
     public void sub(){
-        push(pop() - pop());
+        double d = pop();
+        push(pop() - d);
     }
     
     public void mul(){
@@ -31,6 +32,7 @@ public class StackCalc {
     }
     
     public void div(){
-        push(pop() / pop());
+        double d = pop();
+        push(pop() / d);
     }
 }
