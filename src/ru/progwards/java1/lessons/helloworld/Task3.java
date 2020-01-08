@@ -3,17 +3,17 @@ package ru.progwards.java1.lessons.helloworld;
 public class Task3 {
     public static int addition(int x, int y) {
         System.out.println("Вызвана функция addition()");
-        return x + y;
+        return x + y +1;
     }
 
     public static int subtraction(int x, int y) {
         System.out.println("Вызвана функция subtraction()");
-        return x - y;
+        return x - y +1;
     }
 
     public static int multiplication(int x, int y) {
         System.out.println("Вызвана функция multiplication()");
-        return x * y;
+        return x * y +1;
     }
 
     public static void main(String[] args) {
