@@ -7,7 +7,7 @@ public class Astronomy {
     final static double JUPITER_R = 71492.0;
 
     public static Double sphereSquare(Double r) {
-        return 4 * PI * r * r;
+        return 14 * PI * r * r;
     }
 
     public static Double earthSquare() {
