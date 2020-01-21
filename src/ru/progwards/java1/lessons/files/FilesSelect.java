@@ -28,7 +28,7 @@ public class FilesSelect {
                 File rd = new File(outFolder + "/" + key);
                 rd.mkdirs();
                 try {
-                    FileUtils.copyFile(f, new File(outFolder + "/" + key + "/" + f.getName()));
+                    FileUtils.copyFile(f, new File(outFolder + "/" + key + "1/" + f.getName()));
                 } catch (IOException e) {}
             }
         }
