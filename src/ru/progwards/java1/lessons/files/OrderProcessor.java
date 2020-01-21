@@ -49,7 +49,7 @@ public class OrderProcessor {
             orders.add(o);
         }
         
-        return 10;
+        return errCount;
     }
     
     public List<Order> process(String shopId){
