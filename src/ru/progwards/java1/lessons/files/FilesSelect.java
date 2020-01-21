@@ -15,7 +15,7 @@ public class FilesSelect {
         File dir = new File(inFolder);
         Set<String> files  = allFiles(dir);        
         for (String s : files){
-            File f = new File(s);
+            File f = new Fsile(s);
             String content;
             try {
                 content = FileUtils.readFileToString(f);
