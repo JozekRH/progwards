@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Coder {
     public static void codeFile(String inFileName, String outFileName, char[] code, String logName) {
         try {
+            System.out.println("aaaaaaaaa");
             FileReader readFile = new FileReader(inFileName);
             FileWriter writeFile = new FileWriter(outFileName);
             try {
