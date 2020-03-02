@@ -16,6 +16,7 @@ public class Profiler {
     
     public static void enterSection(String name){
         
+        System.out.println("Вход в сессию " + name);
         for (String s: openSectionsStartTimes.keySet()){
             if (innerSections.get(s) != null) innerSections.get(s).add(name);
             else{
@@ -44,6 +45,8 @@ public class Profiler {
         openSectionsStartTimes.remove(name);
         innerSections.remove(name);
         statisticInfos.put(name, si);
+        
+        System.out.println("Выход из сессии " + name);
     }
     
     public static List<StatisticInfo> getStatisticInfo(){
