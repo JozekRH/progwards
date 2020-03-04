@@ -1,41 +1,57 @@
 package ru.progwards.java1.lessons.io1;
-//lalala
-import java.io.*;
-import java.util.Arrays;
+
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class Coder {
-    public static void codeFile(String inFileName, String outFileName, char[] code, String logName) {
-        try {
-            System.out.println("aaaaaaaaa");
-            FileReader readFile = new FileReader(inFileName);
-            FileWriter writeFile = new FileWriter(outFileName);
-            try {
-                int count = 0;
-                //итерации будут производиться со смещением символа пока в файле есть символы
-                while (readFile.ready()) {
-                    writeFile.write(code[readFile.read()]);
-                    //посчитаем количество итераций цикла
-                    count++;
-                }
-                System.out.println(count);
-            } finally {
-                readFile.close();
-                writeFile.close();
+	public static void codeFile(String inFileName, String outFileName, char[] code, String logName){
+		
+		String content = "";
+		
+		FileInputStream fis = null;
+		try {
+            fis = new FileInputStream(inFileName);
+            InputStreamReader isr = new InputStreamReader(fis);
+            int character;
+ 
+            while ((character = isr.read()) != -1) {
+                char c = (char)character;
+                c = code[(int)c];
+                content += c;
             }
-        } catch (IOException e) {
-            try {
-                PrintStream out = new PrintStream(new FileOutputStream(logName));
-                System.setOut(out);
-                System.out.println(e.getMessage());
-            } catch (IOException e1) {
-                System.out.println(e1);
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        char[] charArr = new char[65536];
-        Arrays.fill(charArr, 'H');
-        codeFile("file1.txt", "file3.txt", charArr, "logFileChar.txt");
-    }
+            isr.close();
+ 
+        	writeFile(outFileName, content);
+        } catch (Exception e) {
+        	try {
+				writeFile(logName, e.getMessage());
+			} catch (IOException e1) {}
+        }finally{
+			try {
+				fis.close();
+			} catch (Exception e) {}
+		}
+	}
+	
+	private static void writeFile(String fileName, String content) throws IOException{
+		
+		FileOutputStream fos = null;
+		
+		try {
+            fos = new FileOutputStream(fileName);
+            OutputStreamWriter osw = new OutputStreamWriter(fos);
+            BufferedWriter bufferedWriter = new BufferedWriter(osw);
+            bufferedWriter.write(content);
+            bufferedWriter.close();
+        }finally
+		{
+        	try {
+				fos.close();
+			} catch (Exception e) {}
+		}
+	}
 }
