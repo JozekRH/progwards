@@ -1,5 +1,5 @@
 package ru.progwards.java1.lessons.compare_if_cycles;
-
+//lalala
 public class CyclesGoldenFibo {
     public static boolean containsDigit(int number, int digit) {
         long remainder;
