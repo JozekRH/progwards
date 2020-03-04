@@ -1,5 +1,5 @@
 package ru.progwards.java1.lessons.io1;
-
+//lalala
 import java.io.*;
 import java.util.Arrays;
 
