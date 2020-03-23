@@ -1,4 +1,4 @@
-package ru.progwards.java1.lessons.trial;
+package ru.progwards.java1.lessons.tests.test;
 
 public class BArray<T extends Object> {
     T[] array;
