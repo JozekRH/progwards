@@ -20,6 +20,15 @@ public class TriangleSimpleInfo<a> {
                 maxValue = inputArray[i];
             }
         }
+        
+    int iii = new Integer(1);
+    
+    boolean result111 = switch(iii) {
+        case 1 -> true;
+        default -> false;
+    };
+        
+        
         return maxValue;
     }
     /*1.2 Реализовать функцию
