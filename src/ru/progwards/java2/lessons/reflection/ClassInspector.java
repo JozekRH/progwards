@@ -1,5 +1,4 @@
 package ru.progwards.java2.lessons.reflection;
-//Такое вот изменение в коде
 
 import java.lang.reflect.*;
 
