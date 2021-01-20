@@ -15,7 +15,8 @@ public class Astronomy {
     }
 
     public static Double mercurySquare() {
-        while (true){}
+        boolean b = false;
+        while (b == false){}
         return sphereSquare(MERCURY_R);
     }
 
