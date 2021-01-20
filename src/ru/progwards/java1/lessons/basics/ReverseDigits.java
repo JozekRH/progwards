@@ -3,7 +3,7 @@ package ru.progwards.java1.lessons.basics;
 public class ReverseDigits {
     // прогамма составляет цифры трёхзначного десятичного числа в обратном порядке
     public static int reverseDigits(int number) {
-        int lowDigit = number % 101;
+        int lowDigit = number % 10;
         number /= 10;
 
         int middleDigit = number % 10;
