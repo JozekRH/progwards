@@ -14,12 +14,7 @@ public class Astronomy {
         return sphereSquare(EARTH_R);
     }
 
-    public static Double mercurySquare() {
-        for(int i = 1; i < Integer.MAX_VALUE; i ++){
-            System.out.println("");
-        }
-        return sphereSquare(MERCURY_R);
-    }
+    public static Double mercurySquare() { return sphereSquare(MERCURY_R); }
 
     public static Double jupiterSquare() {
         return sphereSquare(JUPITER_R);
